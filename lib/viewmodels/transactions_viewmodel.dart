@@ -12,7 +12,6 @@ class TransactionsViewModel extends ChangeNotifier {
   bool loading = false;
 
   Future<void> getTransactions() async {
-    print("It should get the network call");
     try {
       loading = true;
       errorMessage = null;
