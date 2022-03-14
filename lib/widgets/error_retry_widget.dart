@@ -10,32 +10,35 @@ class NetworkErrorRetryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Image.asset(
-          'assets/wifiSlash.png',
-          height: 88,
-          width: 88,
-        ),
-        SizedBox(height: 38),
-        Text(
-          message,
-          style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.normal, height: 1.43),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(height: 24),
-        Container(
-          height: 40,
-          width: 120,
-          child: RaisedButton(
-            onPressed: () {
-              onTap();
-            },
-            child: Text("RETRY", style: TextStyle(color: Colors.white),),
-            color: AppColors.purpleTextColor,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 40),
+      child: Column(
+        children: [
+          Image.asset(
+            'assets/wifiSlash.png',
+            height: 88,
+            width: 88,
           ),
-        ),
-      ],
+          SizedBox(height: 38),
+          Text(
+            message,
+            style: TextStyle(fontSize: 14, color: Colors.black, fontWeight: FontWeight.normal, height: 1.43),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 24),
+          Container(
+            height: 40,
+            width: 120,
+            child: RaisedButton(
+              onPressed: () {
+                onTap();
+              },
+              child: Text("RETRY", style: TextStyle(color: Colors.white),),
+              color: AppColors.purpleTextColor,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

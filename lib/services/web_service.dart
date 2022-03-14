@@ -13,10 +13,10 @@ class WebService {
       if (response.statusCode == 200) {
         return TransactionsResult.fromJson(response.data);
       } else {
-        throw WebError("An error occurred, please try again");
+        throw WebError("An error occurred while fetching data from the server, please try again");
       }
     } catch(e) {
-      throw WebError("An error occurred, please try again");
+      throw WebError("An error occurred while fetching data from the server, please try again");
     }
   }
 }
