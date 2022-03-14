@@ -1,0 +1,4 @@
+enum TransactionMode {
+  outward,
+  inward
+}
